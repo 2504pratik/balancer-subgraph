@@ -1,0 +1,15 @@
+type LiquidityPool @entity {
+  id: ID!
+  token0: Bytes!
+  token1: Bytes!
+  reserve0: BigInt!
+  reserve1: BigInt!
+  totalSupply: BigInt!
+}
+
+type User @entity {
+  id: ID!
+  balance: BigInt!
+  initialLiquidity: BigInt!
+  roi: BigInt!
+}

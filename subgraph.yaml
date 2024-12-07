@@ -1,0 +1,22 @@
+specVersion: 0.0.2
+description: "Subgraph for Liquidity Pool"
+repository: "https://github.com/your-repo/uniswap-subgraph"
+
+dataSources:
+  - kind: ethereum/contract
+    name: LiquidityPool
+    network: mainnet
+    source:
+      address: "0xYourContractAddress"
+      abi: LiquidityPool
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.5
+      language: wasm/assemblyscript
+      entities:
+        - LiquidityPool
+        - User
+      abis:
+        - name: LiquidityPool
+          file: ./abis/LiquidityPool.json
+      file: ./src/mapping.ts
